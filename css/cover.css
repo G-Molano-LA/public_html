@@ -27,8 +27,8 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
 }
+
 
 body {
   display: -ms-flexbox;
@@ -37,9 +37,6 @@ body {
   -ms-flex-pack: center;
   -webkit-box-pack: center;
   justify-content: center;
-  color: #fff;
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
 }
 
 .cover-container {
@@ -56,12 +53,14 @@ body {
 
 .masthead-brand {
   margin-bottom: 0;
+  font-family: URW Gothic L, sans-serif;
 }
 
 .nav-masthead .nav-link {
   padding: .25rem 0;
-  font-weight: 700;
-  color: rgba(255, 255, 255, .5);
+  font-weight: bold;
+  font-family: URW Gothic L, sans-serif;
+  color: rgba(255, 255, 255, 0.021);
   background-color: transparent;
   border-bottom: .25rem solid transparent;
 }
@@ -76,8 +75,8 @@ body {
 }
 
 .nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #fff;
+  color: #333;
+  border-bottom-color: rgb(71, 69, 69);
 }
 
 @media (min-width: 48em) {
@@ -102,9 +101,3 @@ body {
 }
 
 
-/*
- * Footer
- */
-.mastfoot {
-  color: rgba(255, 255, 255, .5);
-}

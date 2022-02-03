@@ -40,7 +40,8 @@ body {
 }
 
 .cover-container {
-  max-width: 95%;
+  max-width: 80%;
+  background-color:#f5f5f5 ;
 }
 
 
@@ -61,7 +62,7 @@ body {
   font-weight: bold;
   font-family: URW Gothic L, sans-serif;
   color: rgba(255, 255, 255, 0.021);
-  background-color: transparent;
+  background-color: white;
   border-bottom: .25rem solid transparent;
 }
 
@@ -100,4 +101,14 @@ body {
   font-weight: 700;
 }
 
-
+/* PRESENTATION TEXT */
+.presentation{
+  font-family: URW Gothic L, sans-serif;
+}
+.hello-world {
+  font-weight: bold;
+  font-size: 3em;
+}
+.bg-lightcoral{
+  background-color: lightcoral;
+}

@@ -8,15 +8,16 @@
   <meta name="author" content="G.Molano, LA">
 
   <title>My Personal Website · Bootstrap v4.0</title>
-  
+
 
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-        
   <!-- Custom styles for this template -->
   <link href="css/cover.css" rel="stylesheet">
+  <!--social network icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
 
  </head>
 
@@ -29,49 +30,54 @@
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
 <!-- HEADER -->
-<div class="p-3 px-md-4 mb-3 bg-white">
-  <header class="masthead mb-auto">
-    <div class="inner">
-      <h2 class="masthead-brand text-dark">
-        <img src="images/Piecito.webp" alt="Diplodocus Logo" 
-            width="30" class="d-inline-block align top"/>
-            Piecito el diplodocus
-      </h2>
-      <nav class="nav nav-masthead justify-content-center float-lg-end">
-        <a class="nav-link text-dark active" aria-current="page" href="#">Home</a>
-        <a class="nav-link text-dark" href="#AboutMe">About Me</a>
-        <a class="nav-link text-dark" href="#Curriculum">Curriculum</a>
-        <a class="nav-link text-dark" href="#Projects">Projects</a>
-      </nav>
-    </div>
-  </header>
-</div>
+<header class="fixed-top p-3 bg-white">
+  <div class="container-fluid">
+    <h2 class="masthead-brand text-dark">
+      <img src="images/Piecito.webp" alt="Diplodocus Logo"
+          width="30" class="d-inline-block align top"/>
+          Piecito el diplodocus
+    </h2>
+    <nav class="nav nav-masthead justify-content-center float-lg-end">
+      <a class="nav-link text-dark active" aria-current="page" href="#">Home</a>
+      <a class="nav-link text-dark" href="#AboutMe">About Me</a>
+      <a class="nav-link text-dark" href="#Curriculum">Curriculum</a>
+      <a class="nav-link text-dark" href="#Projects">Projects</a>
+    </nav>
+  </div>
+</header>
 
 <!-- PRESENTATION -->
-<main class="px-3">
-  <div class="container">
-    <!-- TEXT -->
-    <div class="row align-items-center">
-      <div class="col presentation">
-        <p class="text-muted">Hello, </p>
-        <h1 class="hello-world"> I'm Alejandra Gonzalez</h1>
-        <h4> A Msc student</h4>
-        <p>Future enthuiastic bionformatic, with a biomedical background</p>
-        <p class="lead">
-          <a href="#AboutMe" class="btn btn-lg fw-bold font-weight-bold text-white bg-dark">About Me</a>
-          <a href="#" class="btn btn-lg fw-bold font-weight-bold bg-lightcoral">Hire me, now!</a>
-        </p>
-      </div>
-      <!-- PHOTO -->
-      <div class="col">
-        <img class = "img-fluid float-left" src="images/my_profile_background.png" alt="Profile image">
+<div class="container-fluid">
+  <!-- TEXT -->
+  <div class="row align-items-center">
+    <div class="col presentation">
+      <p class="text-muted">Hello, </p>
+      <h1 class="hello-world"> I'm Alejandra Gonzalez</h1>
+      <h4> A Msc student</h4>
+      <p>Future enthuiastic bionformatic, with a biomedical background</p>
+      <p class="lead">
+        <a href="#AboutMe" class="btn btn-lg fw-bold font-weight-bold text-white bg-dark">About Me</a>
+        <a href="#" class="btn btn-lg fw-bold font-weight-bold bg-lightcoral">Hire me, now!</a>
+      </p>
+      <!-- SOCIAL NETWORKS ICONS -->
+      <div class = "container-fluid">
+        <a>Follow me on </a>
+        <a href="https://linkedin.com/in/leidy-alejandra-gonzalez-molano-269867218" class="btn btn-social-icon btn-rounded text-dark bg-light"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/G-Molano-LA"class="btn btn-social-icon btn-rounded text-dark bg-light"><i class="fab fa-github"></i></a>
+        <a class="btn btn-social-icon btn-rounded text-dark bg-light"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com/aleegm_8"class="btn btn-social-icon btn-rounded text-dark bg-light"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
-    <!-- SOCIAL NETWORKS ICONS -->
+
+    <!-- PHOTO -->
+    <div class="col">
+      <img class = "img-fluid float-left" width="100% \9" height="auto" src="images/my_profile_background.png" alt="Profile image">
+    </div>
   </div>
+</div>
 
   <!-- ABOUT ME-->
-  <div class="cointer">
+  <!-- <div class="cointer">
     <div id="AboutMe" class="row bg-dark">
       <h1>This is the Content of About Me</h1>
     </div>
@@ -81,16 +87,15 @@
     <div id="Projects" class = "row bg-white">
       <h1>This is the Content of Projects</h1>
     </div>
-  </div>
+  </div> -->
 
-</main>
 
 <!-- FOOTER -->
 
 <footer class="container py-2 text-dark">
   <!-- Copyright and Terms -->
   <div class="row align-items-center justify-content-between">
-    <div class="col text-left font-weight-dark"> 
+    <div class="col text-left font-weight-dark">
         &copy; Copyright G.Molano, LA &REG; All rights reserved.
     </div>
     <div class="col text-right">
@@ -100,21 +105,21 @@
   </div>
 </footer>
 
-<!-- ############################### PAGE ENDS HERE ############################################## -->      
+<!-- ############################### PAGE ENDS HERE ############################################## -->
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
 </body>

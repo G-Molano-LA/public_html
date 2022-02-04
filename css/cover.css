@@ -103,6 +103,7 @@ body {
 
 /* PRESENTATION TEXT */
 .presentation{
+  /* padding-top: 120px; */
   font-family: URW Gothic L, sans-serif;
 }
 .hello-world {

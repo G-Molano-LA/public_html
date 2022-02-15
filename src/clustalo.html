@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="G.Molano, LA">
 
-  <title>Alejandra Gonzalez | Home </title>
+  <title>My Personal Website · Bootstrap v4.0</title>
 
 
   <!-- Bootstrap core CSS -->
@@ -15,7 +15,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
   <!-- Custom styles for this template -->
-  <link href="css/cover.css" rel="stylesheet">
+  <link href="../css/cover.css" rel="stylesheet">
   <!--social network icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
 
@@ -33,65 +33,57 @@
 <header class="p-3 my-md-2 bg-white">
   <div class="container-fluid">
     <p class="masthead-brand text-dark">
-      <img src="images/Piecito.webp" alt="Diplodocus Logo"
+      <img src="../images/Piecito.webp" alt="Diplodocus Logo"
           width="40" class="d-inline-block align top"/>
           My Personal Web Page
     </p>
     <nav class="nav nav-masthead justify-content-center float-lg-end">
-      <a class="nav-link text-dark active" aria-current="page" href="index.html">Home</a>
-      <a class="nav-link text-dark" href="src/about_me.html">About Me</a>
-      <a class="nav-link text-dark" href="src/curriculum.html">Curriculum</a>
-      <a class="nav-link text-dark" href="src/projects.html">Projects</a>
+      <a class="nav-link text-dark" aria-current="page" href="../index.html">Home</a>
+      <a class="nav-link text-dark" href="about_me.html">About Me</a>
+      <a class="nav-link text-dark" href="curriculum.html">Curriculum</a>
+      <a class="nav-link text-dark active" href="projects.html">Projects</a>
     </nav>
   </div>
 </header>
 
-<!-- PRESENTATION -->
-<div class="container-fluid">
-  <!-- TEXT -->
-  <div class="row align-items-center justify-content-center">
-    <div class="col-md-6 presentation">
-      <p class="text-muted">Hello, </p>
-      <h1 class="hello-world"> I'm Alejandra Gonzalez</h1>
-      <h4> A Msc student</h4>
-      <p class="text-justify">Future enthuiastic bionformatic, with a biomedical background. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.lorem</p>
-      <div>
-        <a href="about_me.html" class="btn btn-lg fw-bold font-weight-bold text-white bg-dark">About Me</a>
-        <a href="#" class="btn btn-lg fw-bold font-weight-bold bg-lightcoral">Hire me, now!</a>
+<!-- FORM -->
+<div class="card clustal-card">
+  <h5 class="text-center mb-4">Clustal Omega</h5>
+  <form class="form-card" onsubmit="event.preventDefault()">
+    <!-- Input Options -->
+    <h5 class="font-weight-bold">Input Options</h5>
+    <hr></hr>
+      <!-- Protein Sequences in FASTA or UniProt IDs-->
+      <div class="row justify-content-between text-left">
+          <div class="form-group col-sm-6 flex-column d-flex">
+            <label class="form-control-label">Enter FASTA sequences or UniProt IDs</label>
+            <textarea name="FASTA" rows="4" cols="80"></textarea>
+          </div>
       </div>
-    </div>
-    <!-- PHOTO -->
-    <div class="col-md-6 my-3">
-      <img class = "img-fluid float-left mx-auto" width="100% \9" height="auto" src="images/my_profile_background.png" alt="Profile image">
-    </div>
-  </div>
-</div>
+      <!-- Upload File -->
+      <div class="row justify-content-between text-left">
+        <div class="col-sm-6 flex-column d-flex">
+          <p class="form-control-label">Or, Upload File</p>
+          <label class="custom-file-label" for="customFile">Choose file</label>
+          <input type="file" class="custom-file-input" id="customFile">
+        </div>
+      </div>
 
-<!-- SOCIAL NETWORKS ICONS -->
-<div class = "container-fluid presentation my-3">
-  <a>Follow me on </a>
-  <a href="https://linkedin.com/in/leidy-alejandra-gonzalez-molano-269867218" class="btn btn-social-icon btn-rounded text-dark bg-light"><i class="fab fa-linkedin-in"></i></a>
-  <a href="https://github.com/G-Molano-LA"class="btn btn-social-icon btn-rounded text-dark bg-light"><i class="fab fa-github"></i></a>
-  <a class="btn btn-social-icon btn-rounded text-dark bg-light"><i class="fab fa-twitter"></i></a>
-  <a href="https://www.instagram.com/aleegm_8"class="btn btn-social-icon btn-rounded text-dark bg-light"><i class="fab fa-instagram"></i></a>
-</div>
-  <!-- ABOUT ME-->
-  <!-- <div class="cointer">
-    <div id="AboutMe" class="row bg-dark">
-      <h1>This is the Content of About Me</h1>
+    <!-- Submit Button -->
+    <div class="row justify-content-between">
+        <div class="form-group col-sm-6">
+          <button type="submit" class="btn-block btn-primary">Request a demo</button>
+        </div>
     </div>
-    <div id="Curriculum" class= "row bg-lightcoral">
-      <h1>This is the Content of Curriculum</h1>
-    </div>
-    <div id="Projects" class = "row bg-white">
-      <h1>This is the Content of Projects</h1>
-    </div>
-  </div> -->
+  </form>
+</div> <!-- ./card -->
+
 
 
 <!-- FOOTER -->
 
 <footer class="container py-2 text-dark">
+  <hr></hr>
   <!-- Copyright and Terms -->
   <div class="row align-items-center justify-content-between">
     <div class="col text-left font-weight-dark">
@@ -121,7 +113,14 @@
         crossorigin="anonymous"></script>
 <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+<!-- Show file name -->
+<script>
+$('#customFile').change(function() {
+  var i = $(this).prev('label').clone();
+  var file = $('#customFile')[0].files[0].name;
+  $(this).siblings(".custom-file-label").addClass("selected").html(file);
+});
+</script>
 
 </body>
 </html>

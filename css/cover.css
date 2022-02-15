@@ -376,3 +376,18 @@ div.timeline-nodes:hover{
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
+
+/* CLUSTAL OMEGA*/
+.clustal-card {
+    padding: 30px 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border: none !important;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2)
+}
+
+.custom-file-label{
+  position: relative;
+  border: 0.5px solid #212529 ;
+  margin-bottom: 1.5rem;
+}

@@ -46,12 +46,23 @@
   </div>
 </header>
 
+<!-- Include php file -->
+<?php
+# Show php errors
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+require '../clustal-o/execution.php';
+ ?>
 <!-- FORM -->
 <div class="card clustal-card">
   <h5 class="text-center mb-4">Clustal Omega</h5>
-  <form class="form-card" onsubmit="event.preventDefault()" method="POST">
+  <form class="form-card"  method="POST">
     <!-- Input Options -->
-    <h5 class="font-weight-bold">Input Options</h5>
+    <h5 class="font-weight-bold">Input Options
+      <span class="error"> * <?php echo $input_err; ?></span>
+    </h5>
+    <!-- Display error message -->
     <hr></hr>
       <!-- Protein Sequences in FASTA or UniProt IDs-->
       <div class="row justify-content-between text-left">
@@ -63,12 +74,9 @@
       <!-- Upload File -->
       <div class="row justify-content-between text-left">
         <div class="col-sm-6 flex-column d-flex">
-          <p class="form-control-label">Or, Upload File</p>
+          <p class="form-control-label">Or, Upload FASTA File</p>
           <label class="custom-file-label" for="customFile">Choose file</label>
           <input type="file" name="upload_file" class="custom-file-input" id="customFile">
-          <!-- Display error message -->
-          <span class="error">* <?php echo $input_err;?></span>
-          <br><br>
         </div>
       </div>
 
@@ -77,8 +85,10 @@
     <hr></hr>
     <div class="form-group">
       <label for="output_format">Select the output format</label>
-      <select multiple class="form-control" id="output_format" name="ouput_format">
-        <option>fasta</option>
+      <!-- Display error message -->
+      <span class="error"> * <?php echo $outfmt_err; ?></span>
+      <select multiple class="form-control" id="output_format" name="output_format">
+        <option selected>fasta</option>
         <option>clustal</option>
         <option>msf</option>
         <option>phylip</option>
@@ -86,14 +96,11 @@
         <option>stockholm</option>
         <option>vienna</option>
       </select>
-      <!-- Display error message -->
-      <span class="error">* <?php echo $outfmt_err;?></span>
-      <br><br>
     </div>
     <!-- Submit Button -->
     <div class="row justify-content-between">
         <div class="form-group col-sm-6">
-          <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+          <button type="submit" id="myButton" class="btn btn-primary" name="submit">Submit</button>
         </div>
     </div>
   </form>
@@ -142,6 +149,7 @@ $('#customFile').change(function() {
   $(this).siblings(".custom-file-label").addClass("selected").html(file);
 });
 </script>
+
 
 </body>
 </html>

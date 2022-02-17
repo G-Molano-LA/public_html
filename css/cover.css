@@ -19,6 +19,12 @@ a:hover {
   border: .05rem solid #fff;
 }
 
+/* Error messages */
+
+.error {
+  color: #FF0000;
+}
+
 
 /*
  * Base structure

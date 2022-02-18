@@ -57,8 +57,8 @@
     </p>
     <nav class="nav nav-masthead justify-content-center float-lg-end">
       <a class="nav-link text-dark" aria-current="page" href="../index.html">Home</a>
-      <a class="nav-link text-dark" href="about_me.html">About Me</a>
-      <a class="nav-link text-dark" href="curriculum.html">Curriculum</a>
+      <a class="nav-link text-dark" href="../src/about_me.html">About Me</a>
+      <a class="nav-link text-dark" href="../src/curriculum.html">Curriculum</a>
       <a class="nav-link text-dark active" href="projects.html">Projects</a>
     </nav>
   </div>
@@ -111,9 +111,9 @@
     <!-- Submit Button -->
     <div class="row justify-content-between">
         <div class="form-group col-sm-6">
-          <button class="btn" name="clear">Clear</button>
           <a href="#ClustalOutput"><button type="submit" class="btn btn-primary"
             name="submit" onClick="redirect_output()">Submit</button></a>
+          <button class="btn" name="clear">Clear</button>
         </div>
     </div>
   </form>
@@ -175,7 +175,7 @@ if (isset($exit_code)) {?>
   </div>
 </footer>
 
-<!-- ############################### PAGE ENDS HERE ############################################## -->
+<!-- ############################### PAGE ENDS HERE ######################## -->
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

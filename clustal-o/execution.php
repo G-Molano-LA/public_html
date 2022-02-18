@@ -66,15 +66,6 @@ if (isset($_POST['submit'])){
     fclose($temp_fh);
   }
 } # if-isset
-#~~~~~~~~~~~~~~~~~~~~~~~~~Delete generated results~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-// # Delete ouput file if clear or new request button is pressed
-// if (isset($_POST["new_request"]) OR isset($_POST["clear"])) {
-//   if (file_exists($outfile)) {
-//     unlink($outfile);
-//
-//   }
-// }
 
 #~~~~~~~~~~~~~~~~~~~~~~~ FUNCTIONS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function test_input($data) {
@@ -99,6 +90,4 @@ function delete_files($dir_path){
   }
 }
 
-# When refresing page, clears out any post data
-// header("Location: clustalo.php", true, 400);
  ?>

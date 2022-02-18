@@ -397,3 +397,8 @@ div.timeline-nodes:hover{
   border: 0.2px solid #212529 ;
   margin-bottom: 1.5rem;
 }
+
+/* Clustal */
+.clustal_output{
+  font-family: monospace;
+}

@@ -1,17 +1,20 @@
 <?php
-# define variables and set to empty values
-$input = $input_file = $output_format = "";
-$input_err = $outfmt_err = "";
 
-# Create a temp file
-$temp_file = "temp.fa";
-$temp_fh = fopen($temp_file, "a");
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+# define variables and set to empty values
+$input = $input_file = $output_format = $temp_file = "";
+$input_err = $outfmt_err = "";
+$dir_results = "results/";
+
 
 # get the field when the search bottom is press
 if (isset($_POST['submit'])){
   # Get variables from post method
-  $input         = test_input($_POST['FASTA']);
-  $input_file    = test_input($_POST['upload_file']);
+  $input         = $_POST['FASTA'];
+  $input_file    = $_FILES['UploadFile']["name"];
   $output_format = test_input($_POST['output_format']);
 
 
@@ -22,10 +25,13 @@ if (isset($_POST['submit'])){
     $input_err = "Only ONE input option must be provided";
   }elseif (!empty($input)) {
   #~~~~~~~~~~~~~~~~~~~~~~~~ Get input Data from text box~~~~~~~~~~~~~~~~~~~~~~~
+  # Create a temp file
+  $temp_file = "temp.fa";
+  $temp_fh = fopen($temp_file, "a");
 
     # 1. FASTA files
     if (str_starts_with($input, ">")) {
-      # fasta file as input
+      fwrite($temp_fh, $input);
     }else {
       # 2. UniProt IDs
       // $temp = tmpfile();
@@ -41,14 +47,34 @@ if (isset($_POST['submit'])){
       } # foreach
     } # else
 
-    # redirect to another page
-    header('location:clustal_results.php');
-    exit();
+  # 3. Get data from uploaded file. Check if it is uploaded correct
+}elseif (!empty($input_file)) {
+  $temp_file = $_FILES['UploadFile']['tmp_name'];
+  }
 
-  } # elseif
+  #~~~~~~~~~~~~~~~~~~~~~~~~~Run clustal Omega~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  # Delete previous results, if any
+  delete_files($dir_results);
+
+  $outfile = $dir_results."clustal_out.".$output_format;
+  $cmd = "./clustalo --force -i ".$temp_file." -o ".$outfile." --outfmt ".$output_format;
+  // echo "$cmd";
+  exec($cmd, $output,$exit_code);
+
+  #echo "Returned with status $exit_code\n";
+  if (!empty($input)) {
+    fclose($temp_fh);
+  }
 } # if-isset
+#~~~~~~~~~~~~~~~~~~~~~~~~~Delete generated results~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
+// # Delete ouput file if clear or new request button is pressed
+// if (isset($_POST["new_request"]) OR isset($_POST["clear"])) {
+//   if (file_exists($outfile)) {
+//     unlink($outfile);
+//
+//   }
+// }
 
 #~~~~~~~~~~~~~~~~~~~~~~~ FUNCTIONS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function test_input($data) {
@@ -60,5 +86,19 @@ function test_input($data) {
   return $data;
 }
 
+function delete_files($dir_path){
+  # get all filenames
+  $path = $dir_path."*";
+  $files = glob($path);
 
+  if (!empty($files)) {
+    # Iterate and delete files
+    foreach($files as $file){
+      unlink($file);
+    }
+  }
+}
+
+# When refresing page, clears out any post data
+// header("Location: clustalo.php", true, 400);
  ?>

@@ -1,0 +1,67 @@
+CLUSTAL O(1.2.4) multiple sequence alignment
+
+
+sp|P02774|VTDB_HUMAN      ---------MKRVLVLLLAVAFGHA-----LER---------------------GR----
+sp|P02787|TRFE_HUMAN      MRLAVGALLVCAVLG--LCLAVPDKTVRWCAVSEHEATKCQSFRDHMKSVIPSDGPSVAC
+sp|P04278|SHBG_HUMAN      -MESRGPLATSRLLLLLLLLLLRHTRQGWALRPVLPT---QSAHD-PPAVHLSNGPGQEP
+                                      :*   * : . .                              *     
+
+sp|P02774|VTDB_HUMAN      ----D-----------------YEKNKVCKEFSHLGKEDFTSLSLVLYSRKFPSGTFEQV
+sp|P02787|TRFE_HUMAN      VKKASYLDCIRAIAANEADAVTLDAGLVY--DAYLAPNNLKPVVAEFYGSKEDPQTFYYA
+sp|P04278|SHBG_HUMAN      IAVMT-----------------FDLTKITKTSSSFEVRTWDPEGVIFYGDTNPKDDWFML
+                                                 :   :    : :  .        :*. .     :   
+
+sp|P02774|VTDB_HUMAN      SQLV-K----EVVSLT--EACCAEGADPDCYDTRTSALS---------------------
+sp|P02787|TRFE_HUMAN      VAVVKKDSGFQMNQLRGKK-SCHTGLGRS---AGWNIPI-G------LL---------YC
+sp|P04278|SHBG_HUMAN      GLRDGR----PEIQLHNHWAQLTVGAGPRLDDGRWHQVEVKMEGDSVLLEVDGEEVLRLR
+                               :       .*         * .                                 
+
+sp|P02774|VTDB_HUMAN      --------------------AKSCESNSPFPVHPGTA---ECCT--------------KE
+sp|P02787|TRFE_HUMAN      DLPEPRKPLEKAVANFFSGSCAPCADGTDFPQLCQLCPGCGCSTLNQYFGYSGAFKCLKD
+sp|P04278|SHBG_HUMAN      QVSGPLTSKRHPIMRIALGGLLFPASNLRLPLVPALD---GCLR--------------RD
+                                                   ..  :*          *                ::
+
+sp|P02774|VTDB_HUMAN      GLER-----------------------KLCMAAL-------K-HQPQEFPTYVEPTNDEI
+sp|P02787|TRFE_HUMAN      GAGDVAFVKHSTIFENLANKADRDQYELLCLDNTRKPVDEYKDCHLAQVPSHTV-----V
+sp|P04278|SHBG_HUMAN      SWLD-----------------------KQAEISASAP-TSLRSCDVESNPGIFLPPGTQA
+                          .                            .           :  .  . *          
+
+sp|P02774|VTDB_HUMAN      CEAFRKDPKEYANQFMWEYSTN-------------------YGQAPL---S-------LL
+sp|P02787|TRFE_HUMAN      AR-----SMGGKEDLIWELLNQAQEHFGKDKSKEFQLFSSPHGKDLLFKDSAHGFLKVPP
+sp|P04278|SHBG_HUMAN      EFNLRDIPQP--HAEPWAFSLD-------------------LGLKQA---AGSGHLLALG
+                                      .   *    :                    *       :         
+
+sp|P02774|VTDB_HUMAN      VSYTKSYLSMV----------GSCCTSASPT-----VCFLKE--RLQLKHLSLLTTLSNR
+sp|P02787|TRFE_HUMAN      RMDAKMYLGYEYVTAIRNLREGTCPEAPTDECKPVKWCALSHHERLKCDEWSV-NSVGKI
+sp|P04278|SHBG_HUMAN      TPENPSWLSLHLQDQKVVLSSGSGPGLDLPL-----VLGL----PLQLK-----LSMSRV
+                                :*.            *:                *     *: .      ::.. 
+
+sp|P02774|VTDB_HUMAN      VCSQYA---------AYGE--KKSRLSNLIKLAQKVPTADLEDVLPLAEDITNILSKCCE
+sp|P02787|TRFE_HUMAN      ECVSAETTEDCIAKIMNGEADAMSLDGGFVY------IAGKCGLVPVLAENYNKSDNCED
+sp|P04278|SHBG_HUMAN      VLSQ-------------GS--KMKA--------LALPPLGLAPLLNLWAK----------
+                             .             *.    .               .   :: :  .          
+
+sp|P02774|VTDB_HUMAN      SASEDCMAKELPEHT--VKLCDNLST-----------------------------KNSKF
+sp|P02787|TRFE_HUMAN      TPEAGYFAIAVVKKSASDLTWDNLKGKKSCHTAVGRTAGWNIPMGLLYNKINHCRFDEFF
+sp|P04278|SHBG_HUMAN      ------------------------------------------------------------
+                                                                                      
+
+sp|P02774|VTDB_HUMAN      EDCCQEKTAMDVFVCTYFMPAAQLPELPDVELPTNKDVCDPGNTKVMDKYTFELSRRTHL
+sp|P02787|TRFE_HUMAN      SEGCAPGSKKDSSLCKL-------------CMGSGLNLCEPNNKEGYYGYTGAFRC----
+sp|P04278|SHBG_HUMAN      ------------------------------------------------------------
+                                                                                      
+
+sp|P02774|VTDB_HUMAN      PEVFLSKVLEPTLKSLGECCDVEDSTTCFNAKGPLLK---KELSSFIDKG------QELC
+sp|P02787|TRFE_HUMAN      --------------------LVEKGDVAFVKHQTVPQNTGGKNPDPWAKNLNEKDYELLC
+sp|P04278|SHBG_HUMAN      ----------PQGRLFLGALPGEDSSTSFCLNG------------LWAQG------QRLD
+                                                *.. ..*  :                :.      : * 
+
+sp|P02774|VTDB_HUMAN      ADYSENTFTEYKKKLAERLKAKL---PDATPTELAKLVNKH-SDFASNCCSINSPPLYCD
+sp|P02787|TRFE_HUMAN      LDGTRKPVEEYANCHLARAPNHAVVTRKDKEACVHKILRQQQHLFGSNV--TDCSGNFCL
+sp|P04278|SHBG_HUMAN      VDQA---------------------------------LNRS-HEIWTHSCPQS-PGN---
+                           * :                                 :.:    : ::    .       
+
+sp|P02774|VTDB_HUMAN      SEIDAELKNIL-------------------------------------------------
+sp|P02787|TRFE_HUMAN      FRS--ETKDLLFRDDTVCLAKLHDRNTYEKYLGEEYVKAVGNLRKCSTSSLLEACTFRRP
+sp|P04278|SHBG_HUMAN      -GTDASH-----------------------------------------------------
+                               .                                                      

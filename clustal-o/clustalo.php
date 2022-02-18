@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="h-100">
 
 <head>
@@ -7,7 +7,8 @@
   <meta name="description" content="">
   <meta name="author" content="G.Molano, LA">
 
-  <title>My Personal Website · Bootstrap v4.0</title>
+  <title>Alejandra Gonzalez | Clustal Omega</title>
+
 
 
   <!-- Bootstrap core CSS -->
@@ -18,10 +19,27 @@
   <link href="../css/cover.css" rel="stylesheet">
   <!--social network icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+  <!-- Favicon file need this: -->
+  <link rel="shortcut icon" href="#">
+
+  <style>
+  .sequence-format{
+    font-family: unset;
+  }
+  </style>
+
+  <!-- Include php file -->
+  <?php
+  # Show php errors
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);
+  error_reporting(E_ALL);
+  require '../clustal-o/execution.php';
+   ?>
 
  </head>
 
- <!-- ############################### PAGE STARTS HERE ############################################## -->
+ <!-- ############################### PAGE STARTS HERE ##################### -->
 
  <!-- Background color, text centered  -->
 <body class="d-flex h-100">
@@ -29,7 +47,7 @@
 <!-- Cover container -->
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
-<!-- HEADER -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~HEADER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <header class="p-3 my-md-2 bg-white">
   <div class="container-fluid">
     <p class="masthead-brand text-dark">
@@ -46,41 +64,33 @@
   </div>
 </header>
 
-<!-- Include php file -->
-<?php
-# Show php errors
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-require '../clustal-o/execution.php';
- ?>
-<!-- FORM -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FORM~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <div class="card clustal-card">
   <h5 class="text-center mb-4">Clustal Omega</h5>
-  <form class="form-card"  method="POST">
+  <form class="form-card"  method="POST" enctype="multipart/form-data" id="ClustalForm">
     <!-- Input Options -->
     <h5 class="font-weight-bold">Input Options
+      <!-- Display error message -->
       <span class="error"> * <?php echo $input_err; ?></span>
     </h5>
-    <!-- Display error message -->
     <hr></hr>
       <!-- Protein Sequences in FASTA or UniProt IDs-->
       <div class="row justify-content-between text-left">
           <div class="form-group col-sm-6 flex-column d-flex">
             <label class="form-control-label">Enter FASTA sequences or UniProt IDs</label>
-            <textarea name="FASTA" rows="4" cols="80"></textarea>
+            <textarea class="sequence-format" name="FASTA" rows="4" cols="100" style="font-family:monospace;"></textarea>
           </div>
       </div>
-      <!-- Upload File -->
+      <!--- Upload File -->
       <div class="row justify-content-between text-left">
         <div class="col-sm-6 flex-column d-flex">
           <p class="form-control-label">Or, Upload FASTA File</p>
-          <label class="custom-file-label" for="customFile">Choose file</label>
-          <input type="file" name="upload_file" class="custom-file-input" id="customFile">
+          <label class="custom-file-label" for="UploadFile">Choose file</label>
+          <input type="file" name="UploadFile" class="custom-file-input" id="UploadFile">
         </div>
       </div>
 
-    <!-- Input Options -->
+    <!-- Output Options -->
     <h5 class="font-weight-bold">Output Options</h5>
     <hr></hr>
     <div class="form-group">
@@ -88,7 +98,7 @@ require '../clustal-o/execution.php';
       <!-- Display error message -->
       <span class="error"> * <?php echo $outfmt_err; ?></span>
       <select multiple class="form-control" id="output_format" name="output_format">
-        <option selected>fasta</option>
+        <option selected>fasta</option>upload_file
         <option>clustal</option>
         <option>msf</option>
         <option>phylip</option>
@@ -97,18 +107,57 @@ require '../clustal-o/execution.php';
         <option>vienna</option>
       </select>
     </div>
+
     <!-- Submit Button -->
     <div class="row justify-content-between">
         <div class="form-group col-sm-6">
-          <button type="submit" id="myButton" class="btn btn-primary" name="submit">Submit</button>
+          <button class="btn" name="clear">Clear</button>
+          <a href="#ClustalOutput"><button type="submit" class="btn btn-primary"
+            name="submit" onClick="redirect_output()">Submit</button></a>
         </div>
     </div>
   </form>
 </div> <!-- ./card -->
 
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~RESULTS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
+<!-- Check if clustal execution was performed correcly -->
+<?php
+if (isset($exit_code)) {?>
+  <div class="card clustal-card sequence-format" id = "ClustalOutput" name="ClustalOutput">
+  <?php if ($exit_code != 0) {
+    echo "Ups, an error ocurred";
+    exit();
+  }?>
+  <h5 class="text-center mb-4"><?php echo "RESULTS"; ?></h5>
+  <!-- CLEAR AND DOWNLOAD RESULT BUTTONS -->
+  <div class="row justify-content-between">
+      <div class="form-group col-sm-6">
+        <a href="<?php echo $outfile; ?>" download = "<?php echo $outfile; ?>"
+          class="btn btn-lg font-weight-bold" name = "dw-results" role="button" style="background-color:lightcoral">
+          Download Results</a>
+          <a href="#ClustalForm"><button class="btn btn-lg font-weight-bold"
+            name="new_request" onClick = "redirect_new_request()">New Request</button></a>
+      </div>
+  <p style="font-family:monospace">
+  <?php
+    $fh = fopen( $outfile,'r');
+    while (($line = fgets($fh)) ) {
+      echo nl2br($line);
+    }?>
+  </p>
+</div>
 
-<!-- FOOTER -->
+<?php
+  # deleting the generated files
+  if (file_exists($temp_file)) {
+    unlink($temp_file);
+    // unlink($outfile);
+  }
+}
+ ?>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~FOOTER~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 <footer class="container py-2 text-dark">
   <hr></hr>
@@ -141,13 +190,33 @@ require '../clustal-o/execution.php';
         crossorigin="anonymous"></script>
 <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!-- Show file name -->
+
+<!-- Show file name on upload box -->
 <script>
-$('#customFile').change(function() {
+$('#UploadFile').change(function() {
   var i = $(this).prev('label').clone();
-  var file = $('#customFile')[0].files[0].name;
+  var file = $('#UploadFile')[0].files[0].name;
   $(this).siblings(".custom-file-label").addClass("selected").html(file);
 });
+</script>
+
+ <!-- Redirect to ClustalOutput container -->
+ <script>
+ function redirect_output(){
+   location.href = "#ClustalOutput";
+ }
+</script>
+
+ <!-- Create a new request -->
+<script>
+function redirect_new_request(){
+  // redirect to form section
+  location.href = "#ClustalForm";
+  // refresh window and clear post information
+  window.location.reload = window.location.href;
+  // Delete output content
+  document.getElementById('ClustalOutput').innerHTML=''
+}
 </script>
 
 

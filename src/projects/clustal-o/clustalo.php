@@ -16,7 +16,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
   <!-- Custom styles for this template -->
-  <link href="../../css/cover.css" rel="stylesheet">
+  <link href="../../../css/cover.css" rel="stylesheet">
   <!--social network icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
   <!-- Favicon file need this: -->
@@ -51,14 +51,14 @@
 <header class="p-3 my-md-2 bg-white">
   <div class="container-fluid">
     <p class="masthead-brand text-dark">
-      <img src="../../images/Piecito.webp" alt="Diplodocus Logo"
+      <img src="../../../images/Piecito.webp" alt="Diplodocus Logo"
           width="40" class="d-inline-block align top"/>
           My Personal Web Page
     </p>
     <nav class="nav nav-masthead justify-content-center float-lg-end">
-      <a class="nav-link text-dark" aria-current="page" href="../index.html">Home</a>
-      <a class="nav-link text-dark" href="../src/about_me.html">About Me</a>
-      <a class="nav-link text-dark" href="../src/curriculum.html">Curriculum</a>
+      <a class="nav-link text-dark" aria-current="page" href="../../../index.html">Home</a>
+      <a class="nav-link text-dark" href="../../../src/about_me.html">About Me</a>
+      <a class="nav-link text-dark" href="../../../src/curriculum.html">Curriculum</a>
       <a class="nav-link text-dark active" href="projects.html">Projects</a>
     </nav>
   </div>

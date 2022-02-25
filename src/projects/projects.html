@@ -29,13 +29,13 @@
 <!-- Cover container -->
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
-<!-- HEADER -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~HEADER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <header class="p-3 my-md-2 bg-white">
   <div class="container-fluid">
     <p class="masthead-brand text-dark">
       <img src="../../images/Piecito.webp" alt="Diplodocus Logo"
           width="40" class="d-inline-block align top"/>
-          My Personal Web Page
+          Piecito, el <i>Diplodocus</i>
     </p>
     <nav class="nav nav-masthead justify-content-center float-lg-end">
       <a class="nav-link text-dark" aria-current="page" href="../../index.html">Home</a>
@@ -81,16 +81,53 @@
           <h5 class="card-title font-weight-bold">Design a Data Model</h5>
           <h6 class="card-subtitle mb-2 text-muted">Individual Exercise</h6>
           <p class="card-text"> A series of proteomics analysis</p>
-          <a href="#" class="btn" style="background-color:lightcoral;">Go</a>
+          <!-- Button trigger modal -->
+          <button class="btn bg-lightcoral" data-toggle="modal" data-target="#DataModel">Go</button>
+          <!-- Modal -->
+          <div class="modal fade" id="DataModel" tabindex="-1" role="dialog" aria-labelledby="ProteomicsExperiment" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document" style="max-width: 1200px;">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title text-center font-weight-bold" id="ProteomicsExperiment">Proteomics Analysis</h3>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body text-justify">
+                  <p>Below, a data model to hold data from a series of proteomics analysis is defined. It contains the following tables:</p>
+                  <p>1. <b>User</b>: scientist leading the proteomic experiment.</p>
+                  <p>2. <b>Experiments</b>: wet-lab experiment.</p>
+                  <p>3. <b>Experimental protocols</b>: experimental tecnhiques related to the wet-lab experiment.</p>
+                  <p>4. <b>Samples</b>: metadata associated to the experiments.</p>
+                  <p>5. <b>Peptide sequences</b>: sequences identified in the proteomic experiment (e.g. results from Mass spectrometry).</p>
+                  <p>6. <b>Proteins</b>: proteins identified after performing a bioinformatic analysis on the proteomic experiment results.</p>
+                  <p>7. <b>References</b>: citations from either experiments or protocols.</p>
+                  <div class="container-fluid"><img class="img-fluid" src="data_model/data_model_with_relationships.png"></div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary font-weight-bold" data-dismiss="modal">Close</button>
+                  <div class="btn-group" role="group">
+                    <a href="data_model/data_model_with_relations.mwb" download = "Gonzalez_Molano_LA_ERR_model.mwb"
+                      class="btn font-weight-bold text-white" name = "Gonzalez_Molano_LA_ERR_model" role="button" style="background-color: #6c1818">
+                      ERR Model</a>
+                    <a href="data_model/data_model_with_relationships.png" download = "Gonzalez_Molano_LA_png_model.png"
+                      class="btn font-weight-bold bg-lightcoral" name = "Gonzalez_Molano_LA_png_model" role="button" >
+                      PNG</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- /.modal-->
         </div>
-      </div>
-    </div>
+      </div> <!-- /.card -->
+    </div> <!-- /.col -->
   </div>  <!-- /.row -->
 </div> <!-- /.container -->
 
-<!-- FOOTER -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~FOOTER~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 <footer class="container py-2 text-dark">
+  <hr></hr>
   <!-- Copyright and Terms -->
   <div class="row align-items-center justify-content-between">
     <div class="col text-left font-weight-dark">

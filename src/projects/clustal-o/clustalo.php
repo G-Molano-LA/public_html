@@ -53,7 +53,7 @@
     <p class="masthead-brand text-dark">
       <img src="../../../images/Piecito.webp" alt="Diplodocus Logo"
           width="40" class="d-inline-block align top"/>
-          My Personal Web Page
+          Piecito, el <i>Diplodocus</i>
     </p>
     <nav class="nav nav-masthead justify-content-center float-lg-end">
       <a class="nav-link text-dark" aria-current="page" href="../../../index.html">Home</a>
@@ -63,10 +63,17 @@
     </nav>
   </div>
 </header>
-
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~BACK BUTTON ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<div class = "row">
+  <a href="../projects.html" class="btn font-weight-bold text-white bg-dark">Go Back</a>
+</div>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FORM~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <div class="card clustal-card">
   <h5 class="text-center mb-4">Clustal Omega</h5>
+  <p class="text-justify" style= "font-size: 1em;">Clustal-Omega is a general purpose multiple sequence alignment (MSA)
+program for protein and DNA/RNA. It produces high quality MSAs and is
+capable of handling data-sets of hundreds of thousands of sequences in
+reasonable time.</p>
   <form class="form-card"  method="POST" enctype="multipart/form-data" id="ClustalForm">
     <!-- Input Options -->
     <h5 class="font-weight-bold">Input Options
@@ -139,7 +146,7 @@ if (isset($exit_code)) {?>
           <a href="#ClustalForm"><button class="btn btn-lg font-weight-bold"
             name="new_request" onClick = "redirect_new_request()">New Request</button></a>
       </div>
-  <p style="font-family:monospace">
+  <p style="font-family:monospace; font-size: 1em;">
   <?php
     $fh = fopen( $outfile,'r');
     while (($line = fgets($fh)) ) {

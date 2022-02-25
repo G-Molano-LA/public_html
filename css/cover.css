@@ -146,8 +146,15 @@ body {
 }
 .hello-world {
   font-weight: bold;
-  font-size: 3em;
+  font-size: 5em;
 }
+
+@media (max-width: 767px) {
+  .hello-world {
+    font-size: 4em;
+  }
+}
+
 .bg-lightcoral{
   background-color: #e99a9a;
 }

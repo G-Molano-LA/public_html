@@ -27,10 +27,10 @@ if (isset($_POST['submit'])){
   #~~~~~~~~~~~~~~~~~~~~~~~~ Get input Data from text box~~~~~~~~~~~~~~~~~~~~~~~
   # Create a temp file
   $temp_file = "temp.fa";
-  $temp_fh = fopen($temp_file, "a");
+  $temp_fh = fopen($temp_file, "wt");
 
     # 1. FASTA files
-    if (str_starts_with($input, ">")) {
+    if (substr($input,0,1) == ">") {
       fwrite($temp_fh, $input);
     }else {
       # 2. UniProt IDs
